@@ -11,7 +11,7 @@ public:
 
     long subtract(long x, long y)
     {
-        return x + y;
+        return x - y;
     }
 
     long divide(long x, long y)
