@@ -5,8 +5,9 @@
 
 #include "Maths.h"
 
-struct Menu
+class Menu
 {
+    
     //doOperation(int opNum, long firstNumber, secondNumber)
     long DoOperation(int opNum, long fNum, long sNum)
     {
@@ -47,7 +48,8 @@ struct Menu
         }
         return 0;
     }
-
+    
+public:
     long FindResult(std::vector<std::string> expression)
     {
         char op = ' ';
