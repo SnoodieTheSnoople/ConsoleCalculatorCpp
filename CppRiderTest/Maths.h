@@ -24,7 +24,7 @@ struct Maths
         return x * y;
     }
 
-    long Power(long x)
+    long Square(long x)
     {
         return x * x;
     }
@@ -41,6 +41,10 @@ struct Maths
 
     long abs(long x)
     {
-        return x - x - x;
+        if (x < 0)
+        {
+            return x * -1;
+        }
+        return x;
     }
 };
