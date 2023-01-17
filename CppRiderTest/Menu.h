@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <algorithm>
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -59,7 +60,7 @@ struct Menu
         {
             if (firstDig != 0.0 && secDig != 0.0)
             {
-                //std::cout << "Does it reach here?" << std::endl;
+                std::cout << "Does it reach here?" << std::endl;
                 result = DoOperation(CheckOperator(op), firstDig, secDig);
                 firstDig = 0.0;
                 secDig = 0.0;
@@ -105,7 +106,7 @@ struct Menu
         //std::cout << "Size of string: " << s.size() << std::endl;
         for (int x = 0; x < s.size(); x++)
         {
-            if (std::isdigit(s[x]))
+            if (std::isdigit(s[x]) || s[x] == '.')
             {
                 //If s[x] is a digit it will add to the std::string value.
                 value += s[x];
