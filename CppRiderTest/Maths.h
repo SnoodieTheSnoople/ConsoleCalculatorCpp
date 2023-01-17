@@ -1,7 +1,8 @@
 ﻿#pragma once
 
-struct Maths
+class Maths
 {
+public:
     long Add(long x, long y)
     {
         return x + y;
@@ -14,7 +15,7 @@ struct Maths
 
     long Divide(long x, long y)
     {
-        //NOTE: No zerodivision error thrown, handles by returning 0.
+        //NOTE: No zerodivision error thrown, returns 0.
         //Improve by implementing in the future.
         return x / y;
     }

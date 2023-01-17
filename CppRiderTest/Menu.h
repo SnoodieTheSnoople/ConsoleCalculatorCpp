@@ -1,15 +1,12 @@
 ﻿#pragma once
 #include <algorithm>
-#include <iostream>
 #include <string>
 #include <vector>
 
 #include "Maths.h"
 
-class Menu
+struct Menu
 {
-public:
-    
     //doOperation(int opNum, long firstNumber, secondNumber)
     long DoOperation(int opNum, long fNum, long sNum)
     {
@@ -108,15 +105,15 @@ public:
         //std::cout << "Size of string: " << s.size() << std::endl;
         for (int x = 0; x < s.size(); x++)
         {
-            if (std::isdigit(s[x]) || s[x] == '.')
+            if (std::isdigit(s[x]))
             {
                 //If s[x] is a digit it will add to the std::string value.
                 value += s[x];
-                std::cout << "Value = " << value << std::endl;
+                //std::cout << "Value = " << value << std::endl;
             }
             else if (std::find(std::begin(operators), std::end(operators), s[x]) != std::end(operators))
             {
-                std::cout << s[x] << std::endl;
+                //std::cout << s[x] << std::endl;
                 sList.push_back(value);
                 value = "";
                 value += s[x];
